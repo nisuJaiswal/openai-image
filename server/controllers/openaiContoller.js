@@ -1,5 +1,6 @@
 
 const dotenv = require('dotenv').config()
+const asyncHandler = require('express-async-handler')
 
 const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({
@@ -34,5 +35,4 @@ const genImage = async (req, res, next) => {
     }
 
 }
-
 module.exports = { genImage }
