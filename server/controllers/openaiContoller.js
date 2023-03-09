@@ -15,7 +15,7 @@ const genImage = async (req, res, next) => {
         const response = await openai.createImage({
             prompt: msg,
             n: 1,
-            size: imgSize
+            size: '256x256'
         });
         image_url = response.data.data[0].url;
 
